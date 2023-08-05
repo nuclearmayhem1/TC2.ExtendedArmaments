@@ -1,0 +1,62 @@
+{
+	name: "Grenade Launcher Ammo (Reduced recoil)"
+	desc:
+		'''
+		Ammunition for grenade launchers. Fires a slower but slightly more potent grenade.
+		Detonates on impact.
+		'''
+	
+	icon:
+	{
+		texture: "resource.ammo_grenade.rr"
+		size: [16, 16]
+		frame: [3, 0]
+	}
+
+	icon_extra:
+	{
+		texture: "ui_icons_gunsmith.mini"
+		size: [16, 16]
+		frame: [2, 0]
+	}
+	
+	min: 2
+	max: 20
+	step: 2
+	type: workshop
+	tags: munitions
+	
+	requirements:
+	[
+		{
+			type: "resource"
+			material: "copper.ingot"
+			amount: 0.250
+		}
+		{
+			type: "resource"
+			material: "steel.ingot"
+			amount: 0.500
+		}
+		{
+			type: "resource"
+			material: "nitrocellulose"
+			amount: 5.000
+		}
+		{
+			type: "work"
+			work: "assembling"
+			amount: 100.000
+			difficulty: 4.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: "resource"
+			material: "ammo_grenade.rr"
+			amount: 1.000
+		}
+	]
+}

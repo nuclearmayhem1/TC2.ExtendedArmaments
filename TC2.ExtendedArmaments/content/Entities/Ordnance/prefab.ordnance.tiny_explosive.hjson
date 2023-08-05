@@ -1,0 +1,91 @@
+$name: "Tiny Bomb"
+$desc:
+	'''
+	A tiny bomb
+	'''
+$tags: []
+
+body:
+{
+	fall_damage_multiplier: 0.010
+
+	@shape.line:
+	{
+		a: [-0.500, 0.000]
+		b: [0.500, 0.000]
+		offset: [0.000, 0.000]
+		mass: 20.000
+		radius: 0.5
+		friction: 0.800
+		elasticity: 0.020
+		rigidity_dynamic: 0.01
+		material: metal
+		layer: entity, solid
+		mask: world, creature, item
+		exclude: tree
+	}
+}
+
+control:
+{
+
+}
+
+health:
+{
+	max: 1000.000
+}
+
+holdable:
+{
+	offset: [0.000, 0.000]
+	flags: storable
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "ordnance_tiny_explosive"
+		frame: [0, 0]
+		size: [16, 16]
+	}
+}
+
+transform:
+{
+
+}
+
+packable:
+{
+
+}
+
+ordnance:
+{
+	min_trigger_velocity: 20.000
+	trigger_time: 1.000
+
+	ordnance_points: 1
+
+	tags: bomb, tiny
+	type: explosive
+	fuse: impact
+}
+
+explosive:
+{
+	radius: 5.000
+	power: 6.500
+	damage_entity: 10000.000
+	damage_terrain: 12000.000
+	smoke_amount: 1.300
+	sparks_amount: 3.900
+	smoke_lifetime_multiplier: 1.500
+	smoke_velocity_multiplier: 1.200
+	flash_duration_multiplier: 0.550
+	flash_intensity_multiplier: 0.250
+	volume: 1.000
+	pitch: 2.300
+}

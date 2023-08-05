@@ -1,0 +1,68 @@
+{
+	name: "Revolving Grenade Launcher"
+	desc:
+		'''
+		A revolving grenade launcher.
+		Lobs large grenades.
+		'''
+	
+	icon:
+	{
+		texture: "revolving_grenade_launcher"
+	}
+	
+	min: 1
+	max: 80
+	step: 1
+	
+	type: workshop
+	flags: blueprintable
+	tags: gunsmith
+	
+	requirements:
+	[
+		{
+			type: resource
+			material: "wood"
+			amount: 8.000
+		}
+		{
+			type: resource
+			material: "steel.ingot"
+			amount: 7.000
+		}
+		{
+			type: resource
+			material: "machine_parts"
+			amount: 9.000
+		}
+		{
+			type: work
+			work: "smithing"
+			amount: 600.000
+			difficulty: 12.000
+		}
+		{
+			type: work
+			work: "woodworking"
+			amount: 250.000
+			difficulty: 5.000
+		}
+		{
+			type: work
+			work: "assembling"
+			amount: 500.000
+			difficulty: 9.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: prefab
+			prefab: "revolving_grenade_launcher"
+			amount: 1.000
+			amount_extra: 0.000
+		}
+	]
+}

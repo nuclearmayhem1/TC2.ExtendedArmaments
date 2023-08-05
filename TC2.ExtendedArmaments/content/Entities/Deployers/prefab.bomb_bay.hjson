@@ -1,0 +1,88 @@
+$name: "Bomb bay"
+$desc:
+	'''
+	A bomb bay.
+	'''
+$tags: []
+
+body:
+{
+	inventory_weight_multiplier: 0.150
+	
+	@shape.box:
+	{
+		size: [5.000, 2.000]
+		offset: [0.000, 0.000]
+		mass: 500.000
+		friction: 0.750
+		elasticity: 0.400
+		material: metal
+		layer: entity, solid
+		mask: world
+	}
+}
+
+health:
+{
+	max: 25000.000
+}
+
+holdable:
+{
+	force_multiplier: 2.000
+	torque_multiplier: 1.000
+	
+	radius: 0.000
+	flags: disable_parent_facing
+}
+
+attachment:
+{
+	force_multiplier: 5.000
+	torque_multiplier: 5.000
+	offset: [0.000, 1.000]
+	flags: disable_parent_facing
+	tags: none
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "bomb_bay"
+	}
+	z: -100
+}
+
+transform:
+{
+
+}
+
+interactable:
+{
+	window_size: [334.000, 336.000]
+	window_offset: [0.000, 0.000]
+	flags: none
+}
+
+ordnancedeployer:
+{
+    ordnance_max: 8
+	cycle_interval: 1
+	launch_velocity: 0.000
+	dud_rate: 0.01
+
+	num_slots: 8
+	max_slots_horizontally: 2
+	
+	key: spacebar
+
+	deployment_offset: [0.000, 1.500]
+	deployment_angle: 0
+}
+
+control:
+{
+
+}

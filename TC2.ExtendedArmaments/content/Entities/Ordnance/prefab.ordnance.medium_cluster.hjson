@@ -1,0 +1,108 @@
+$name: "Medium Clusterbomb"
+$desc:
+	'''
+	A medium size clusterbomb
+	'''
+$tags: []
+
+body:
+{
+	fall_damage_multiplier: 0.010
+
+	@shape.line:
+	{
+		a: [-1.200, 0.000]
+		b: [1.200, 0.000]
+		offset: [0.000, 0.000]
+		mass: 250.000
+		radius: 0.5
+		friction: 0.800
+		elasticity: 0.020
+		rigidity_dynamic: 0.01
+		material: metal
+		layer: entity, solid
+		mask: world, creature, item
+		exclude: tree
+	}
+}
+
+control:
+{
+
+}
+
+health:
+{
+	max: 5000.000
+}
+
+holdable:
+{
+	offset: [0.000, 0.000]
+	radius: 0.500
+
+	flags: disable_parent_facing
+
+	force_multiplier: 4.000
+	torque_multiplier: 1.000
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "ordnance_medium_cluster"
+		frame: [0, 0]
+		size: [32, 16]
+	}
+}
+
+transform:
+{
+
+}
+
+packable:
+{
+
+}
+
+ordnance:
+{
+	min_trigger_velocity: 20.000
+	trigger_time: 1.000
+
+	ordnance_points: 4
+
+	tags: bomb, medium
+	type: explosive
+	fuse: timed
+}
+
+explosive:
+{
+	radius: 0.100
+	power: 0.100
+	damage_entity: 1.000
+	damage_terrain: 1.000
+	smoke_amount: 0.100
+	sparks_amount: 1.000
+	smoke_lifetime_multiplier: 0.100
+	smoke_velocity_multiplier: 0.100
+	flash_duration_multiplier: 0.100
+	flash_intensity_multiplier: 0.100
+	volume: 1.000
+	pitch: 2.300
+}
+
+cluster:
+{
+	prefab: "projectile.bullet.sg.grenade"
+	radius: 5.000
+	spread: 5.000
+	speed: 25.000
+	count: 32
+
+	speed_modifier_min: 0.750
+	speed_modifier_max: 1.000
+}

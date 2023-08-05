@@ -1,0 +1,59 @@
+$tags: []
+
+projectile:
+{
+	damage_base: 20.000
+	damage_bonus: 20.000
+	lifetime: 20.000
+	ignore_time: 0.100
+	damage_type: bullet_musket
+	size: 0.050
+	ricochet_count: 0
+	damp: 0.978
+	gravity: 0.150
+}
+
+transform:
+{
+
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "projectile.grenade.flare"
+	}
+	scale: [0.750, 0.750]
+	z: -40.000
+}
+
+flare:
+{
+	lifetime: 20.000
+	smoke_amount: 0.300
+	sparks_amount: 0.200
+	flicker: 0.500
+	flicker_interval: 0.030
+	lerp: 0.050
+	size: 1500.000
+
+	sound_volume: 3.000
+	sound_pitch: 0.700
+
+	@light:
+	{
+		color: [1.000, 0.300, 0.000, 3.500]
+		offset: [0.000, 0.000]
+		scale: [1000.000, 1000.000]
+		intensity: 1.000
+		texture: "light.circle.00"
+	}
+
+	@sound.emitter:
+	{
+		file: "fuse_loop"
+		size: 1.500
+		size_max_modifier: 2.000
+	}
+}
