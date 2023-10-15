@@ -1,0 +1,125 @@
+$name: "Beartrap"
+$desc:
+	'''
+	A bear trap, when set it will immobilize and moderately injure anyone who step on it.
+	Despite its name it is also often used to trap badgers.
+	'''
+$tags: []
+
+body:
+{
+	@shape.line:
+	{
+		a: [-0.300, -0.200]
+		b: [0.300, -0.200]
+		offset: [0.000, 0.600]
+		mass: 20.000
+		radius: 0.5
+		friction: 0.800
+		elasticity: 0.020
+		rigidity_dynamic: 0.01
+		material: metal
+		layer: entity, solid
+		mask: world, creature, item
+		exclude: tree
+	}
+}
+
+health:
+{
+	max: 2500.000
+}
+
+holdable:
+{
+	offset: [0.000, 0.000]
+	flags: storable
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "bear_trap"
+		frame: [0, 0]
+		size: [16, 16]
+	}
+}
+
+trap:
+{
+	frame_default: 0
+	frame_triggered: 2
+	frame_triggered_creature: 3
+	frame_armed: 1
+	damage_type: 12
+	damage: 500
+	stun: 200
+}
+
+transform:
+{
+
+}
+
+packable:
+{
+
+}
+
+faction:
+{
+
+}
+
+interactable:
+{
+	flags: once
+}
+
+norotate:
+{
+	bias: 0.500
+	mass_multiplier: 5.000
+}
+
+sticky:
+{
+	min_contact_count: 2
+	min_contact_distance: 0.000
+	max_force: 50000.000
+	flags: attach_on_collide
+	mask: world, solid
+	exclude: dynamic, essence, water
+
+	sound: "item.adjust.00"
+}
+
+joint.base:
+{
+	offset_a: [-1.000, 0.000]
+	max_force: 100000.000
+	max_torque: 50000.000
+	flags: no_wrap, no_aiming
+	material_type: metal
+}
+
+joint.pivot:
+{
+	max_bias: 8.000
+	error_bias: 0.001
+}
+
+joint.gear:
+{
+	max_bias: 3.000
+	error_bias: 0.001
+	rotation: -1.570
+}
+
+joint.rope2:
+{
+	distance: 0.000
+	max_bias: 3.000
+	max_force: 15000.000
+}

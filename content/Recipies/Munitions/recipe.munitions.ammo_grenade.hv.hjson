@@ -1,0 +1,62 @@
+{
+	name: "Grenade Launcher Ammo (High-Velocity)"
+	desc:
+		'''
+		Ammunition for grenade launchers. Fires a longer ranged grenade.
+		Detonates on impact.
+		'''
+	
+	icon:
+	{
+		texture: "resource.ammo_grenade.hv"
+		size: [16, 16]
+		frame: [3, 0]
+	}
+
+	icon_extra:
+	{
+		texture: "ui_icons_gunsmith.mini"
+		size: [16, 16]
+		frame: [1, 0]
+	}
+	
+	min: 2
+	max: 20
+	step: 2
+	type: workshop
+	tags: munitions
+	
+	requirements:
+	[
+		{
+			type: "resource"
+			material: "copper.ingot"
+			amount: 0.250
+		}
+		{
+			type: "resource"
+			material: "steel.ingot"
+			amount: 0.500
+		}
+		{
+			type: "resource"
+			material: "nitrocellulose"
+			amount: 8.000
+		}
+		{
+			type: "work"
+			work: "assembling"
+			amount: 100.000
+			difficulty: 4.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: "resource"
+			material: "ammo_grenade"
+			amount: 1.000
+		}
+	]
+}

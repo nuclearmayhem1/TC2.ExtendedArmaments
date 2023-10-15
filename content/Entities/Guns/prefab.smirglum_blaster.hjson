@@ -1,0 +1,141 @@
+$name: "Musket"
+$desc:
+	'''
+	Caplock musket.
+	Good for hunting and medium-range combat.
+	'''
+$tags: []
+
+body:
+{
+	buoyancy: 0.120
+
+	@shape.line:
+	{
+		a: [-1.000, 0.000]
+		b: [1.250, 0.000]
+		mass: 20.000
+		radius: 0.250
+		friction: 0.900
+		elasticity: 0.250
+		material: metal
+		layer: entity, solid, ignore_bullet, ignore_melee, item
+		mask: world
+	}
+}
+
+gun:
+{
+	muzzle_offset: [1.250, -0.1875]
+	receiver_offset: [-0.375, -0.125]
+
+	sound_shoot: "musket_shoot"
+	sound_cycle: "musket_cycle"
+	sound_reload: "musket_reload"
+	velocity_multiplier: 1000.000
+	jitter_multiplier: 2.000
+	damage_multiplier: 5.000
+	recoil_multiplier: 1.300
+	reload_interval: 2.000
+	cycle_interval: 0.500
+	failure_rate: 0.000
+	max_ammo: 1.000
+	projectile_count: 1
+	flags: none
+	ammo_filter: essence
+	action: manual
+	type: rifle
+	feed: breech
+
+	heuristic_range: 20.000
+
+	shake_amount: 0.400
+
+	sound_volume: 1.900
+	sound_pitch: 1.000
+	
+	smoke_size: 4.000
+	smoke_amount: 8
+
+	stability: 1150.000
+	
+	@inventory1:
+	{
+		name: "Ammo"
+		stack_size_multiplier: 1.000
+		type: ammo
+		flags: hidden, ignore_mass
+	}
+	
+	@light:
+	{
+		color: [1.000, 0.400, 0.100, 2.000]
+		offset: [1.250, -0.125]
+		scale: [24.000, 16.000]
+		intensity: 0.000
+		texture: "light.circle.00"
+	}
+}
+
+gun.state:
+{
+
+}
+
+gun.animation:
+{
+	frame_ready: 1
+	frame_ready_loaded: 0
+	frame_fired: 1
+	frame_cycling: 0
+	frame_reloading: 2
+	frame_jammed: 1
+}
+
+holdable:
+{
+	offset: [-0.500, 0.000]
+	radius: 4.000
+	flags: storable
+	hints: gun
+
+	force_multiplier: 1.500
+	torque_multiplier: 1.400
+}
+
+animated.renderer:
+{
+	sprite:
+	{
+		texture: "smirglum_blaster"
+		size: [24, 8]
+		frame: [0, 0]
+		count: 3
+	}
+}
+
+health:
+{
+	max: 4000.000
+}
+
+transform:
+{
+
+}
+
+control:
+{
+
+}
+
+aimable:
+{
+	min: -0.750
+	max: 0.600
+}
+
+packable:
+{
+
+}

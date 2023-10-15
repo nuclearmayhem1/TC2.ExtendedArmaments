@@ -1,0 +1,58 @@
+{
+	name: "Beartrap"
+	desc: 
+		'''
+		A bear trap, when set it will immobilize and moderately injure anyone who step on it.
+		Despite its name it is also often used to trap badgers.
+		'''
+	
+	icon:
+	{
+		texture: "bear_trap"
+		size: [16, 16]
+		frame: [0, 0]
+	}
+	
+	min: 1
+	max: 10
+	step: 1
+	
+	flags: no_amount_multiplier, blueprintable
+	type: workshop
+	tags: manufactory
+	
+	requirements:
+	[
+		{
+			type: "resource"
+			material: "steel.ingot"
+			amount: 5.000
+		}
+		{
+			type: "resource"
+			material: "machine_parts"
+			amount: 1.000
+		}
+		{
+			type: "work"
+			work: "smithing"
+			amount: 200.000
+			difficulty: 8.000
+		}
+		{
+			type: "work"
+			work: "assembling"
+			amount: 100.000
+			difficulty: 8.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: "prefab"
+			prefab: "beartrap"
+			amount: 1.000
+		}
+	]
+}

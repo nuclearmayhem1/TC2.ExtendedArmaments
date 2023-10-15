@@ -1,0 +1,68 @@
+{
+	name: "Grenade Launcher"
+	desc:
+		'''
+		A grenade launcher.
+		Lobs large grenades.
+		'''
+	
+	icon:
+	{
+		texture: "grenade_launcher"
+	}
+	
+	min: 1
+	max: 80
+	step: 1
+	
+	type: workshop
+	flags: blueprintable
+	tags: gunsmith
+	
+	requirements:
+	[
+		{
+			type: resource
+			material: "wood"
+			amount: 5.000
+		}
+		{
+			type: resource
+			material: "steel.ingot"
+			amount: 4.000
+		}
+		{
+			type: resource
+			material: "machine_parts"
+			amount: 2.000
+		}
+		{
+			type: work
+			work: "smithing"
+			amount: 400.000
+			difficulty: 12.000
+		}
+		{
+			type: work
+			work: "woodworking"
+			amount: 150.000
+			difficulty: 5.000
+		}
+		{
+			type: work
+			work: "assembling"
+			amount: 300.000
+			difficulty: 9.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: prefab
+			prefab: "grenade_launcher"
+			amount: 1.000
+			amount_extra: 0.000
+		}
+	]
+}

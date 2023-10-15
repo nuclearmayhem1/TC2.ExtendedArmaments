@@ -1,0 +1,61 @@
+{
+	name: "Grenade Launcher Ammo (Rubber)"
+	desc:
+		'''
+		Ammunition for grenade launchers. Fires a rubber bullet.
+		'''
+	
+	icon:
+	{
+		texture: "resource.ammo_grenade.rubber"
+		size: [16, 16]
+		frame: [3, 0]
+	}
+
+	icon_extra:
+	{
+		texture: "ui_icons_gunsmith.mini"
+		size: [16, 16]
+		frame: [10, 0]
+	}
+	
+	min: 2
+	max: 20
+	step: 2
+	type: workshop
+	tags: munitions
+	
+	requirements:
+	[
+		{
+			type: "resource"
+			material: "rubber"
+			amount: 0.250
+		}
+		{
+			type: "resource"
+			material: "copper.ingot"
+			amount: 0.250
+		}
+		{
+			type: "resource"
+			material: "nitrocellulose"
+			amount: 0.250
+		}
+		{
+			type: "work"
+			work: "assembling"
+			amount: 50.000
+			difficulty: 4.000
+		}
+	]
+	
+	products:
+	[
+		{
+			type: "resource"
+			material: "ammo_grenade.rubber"
+			amount: 1.000
+		}
+	]
+}
